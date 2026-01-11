@@ -1,0 +1,67 @@
+/* Sticky header: beige "glass" that feels more see-through on scroll */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  /* Slightly transparent beige + blur = modern glassy feel */
+  background-color: rgba(244, 239, 232, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  /* Keep padding tight so content can start right under the menu */
+  padding: 40px 0 24px;
+
+  transition: background-color 0.25s ease, backdrop-filter 0.25s ease;
+
+  .header-inner {
+    width: min(980px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  /* Big centered logo */
+  .logo {
+    font-size: 110px;
+    line-height: 1;
+    margin: 0;
+
+    @media (max-width: 650px) {
+      font-size: 52px;
+    }
+  }
+
+  /* Tagline under logo, before nav */
+  .tagline {
+    font-family: 'Noto Serif';
+    font-style: italic;
+    color: #6a6660;
+    margin: 10px 0 16px;
+    font-size: 16px;
+  }
+
+  /* Centered nav with extra spacing between categories */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+
+    @media (max-width: 650px) {
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    a {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+/* Footer stays beige to frame the white content area */
+footer {
+  background: #f4efe8;
+  border-top: 1px solid rgba(0, 0, 0, .12);
+
+  /* Taller footer = nicer "arrival" at the bottom */
+  padding: 64px 0;
+  color: #5b5b5b;
+
+  .footer-inner {
+    width: min(980px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    gap: 24px;
+
+    @media (min-width: 650px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  h3 {
+    margin: 0 0 10px;
+    color: #1c1c1c;
+    font-family: 'Fraunces';
+  }
+
+  p {
+    margin: 0.35em 0;
+  }
+
+  a {
+    text-decoration: none;
+    text-underline-offset: 3px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  /* Colophon / credits: full width at bottom */
+  .footer-meta {
+    grid-column: 1 / -1;
+    margin-top: 28px;
+    text-align: center;
+    color: #6a6660;
+    font-family: 'Noto Serif';
+    font-size: 16px;
+
+    p {
+      margin: 0;
+    }
+
+    .credit {
+      margin-top: 6px;
+      font-size: 14px;
+      font-family: 'Zalando Sans';
+      color: #6a6660;
+    }
+  }
+}

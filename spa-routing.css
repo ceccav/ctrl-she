@@ -1,0 +1,73 @@
+/* Single-page routing with :target
+   - Default page is HOME when no target exists
+   - If an inner element is targeted (e.g. #work-featured),
+     we show the parent section using :has(:target)
+*/
+main {
+  section.page {
+    scroll-margin-top: 190px;
+    display: none;
+  }
+
+  /* Show HOME only when nothing is targeted at all */
+  body:not(:has(:target)) & {
+    #home.page {
+      display: block;
+    }
+  }
+
+  /* Show section when the section itself is targeted */
+  section.page:target {
+    display: block;
+  }
+
+  /* Show section when something inside it is targeted */
+  section.page:has(:target) {
+    display: block;
+  }
+}
+
+/* Active nav underline:
+   Keep selectors explicit to avoid "everything underlined" bugs */
+body {
+
+  &:not(:has(:target)) header nav a[href="#home"],
+  &:has(#home:target) header nav a[href="#home"] {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+  }
+
+  &:has(#tech:target) header nav a[href="#tech"],
+  &:has(#tech-featured:target) header nav a[href="#tech"] {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+  }
+
+  &:has(#work:target) header nav a[href="#work"],
+  &:has(#work-featured:target) header nav a[href="#work"] {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+  }
+
+  &:has(#health:target) header nav a[href="#health"],
+  &:has(#health-featured:target) header nav a[href="#health"] {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+  }
+
+  &:has(#style:target) header nav a[href="#style"],
+  &:has(#style-featured:target) header nav a[href="#style"] {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+  }
+}

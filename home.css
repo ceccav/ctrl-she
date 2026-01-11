@@ -1,0 +1,106 @@
+/* HOME page: 4 previews in a 2x2 grid with ONLY inner borders (no outer frame) */
+#home {
+  .home-hero {
+    text-align: center;
+    padding: 14px 0 6px;
+  }
+
+  .home-headline {
+    font-family: 'Noto Serif';
+    font-size: 46px;
+    line-height: 110%;
+    margin: 6px auto 10px;
+    max-width: 26ch;
+
+    @media (max-width: 650px) {
+      font-size: 36px;
+    }
+  }
+
+  .home-deck {
+    color: #6a6660;
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+
+  .home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: #ffffff;
+
+    @media (max-width: 750px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Each teaser is a "cell" with inner borders only */
+  .home-teaser {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    padding: 22px;
+    text-decoration: none;
+    background: transparent;
+
+    /* Inner borders: right + bottom by default */
+    border-right: 1px solid rgba(0, 0, 0, .12);
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+
+    &:hover {
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.025);
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: 110px 1fr;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      border: 0;
+      border-radius: 0;
+    }
+
+    h2 {
+      margin: 0 0 6px;
+      font-family: 'Noto Serif';
+      font-size: 22px;
+      line-height: 116%;
+    }
+
+    p {
+      margin: 0;
+      color: #6a6660;
+      font-size: 15px;
+      line-height: 155%;
+      max-width: 48ch;
+    }
+  }
+
+  /* Remove outer borders: right edge on column 2 and bottom edge on row 2 */
+  .home-teaser:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .home-teaser:nth-child(n + 3) {
+    border-bottom: 0;
+  }
+
+  /* Mobile: one column; only horizontal separators between items */
+  @media (max-width: 750px) {
+    .home-teaser {
+      border-right: 0;
+    }
+
+    .home-teaser:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, .12);
+    }
+
+    .home-teaser:last-child {
+      border-bottom: 0;
+    }
+  }
+}

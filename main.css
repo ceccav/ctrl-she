@@ -1,0 +1,31 @@
+/* Main content container: simple + reliably centered */
+main {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 34px 24px 52px;
+}
+
+/* Simple editorial divider */
+.divider {
+  height: 1px;
+  background: rgba(0, 0, 0, .12);
+  margin: 34px 0;
+}
+
+/* Grid utility */
+.grid {
+  display: grid;
+  gap: 24px;
+
+  /* Two columns on larger screens */
+  &.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Collapse to one column on small screens */
+  @media (max-width: 900px) {
+    &.two {
+      grid-template-columns: 1fr;
+    }
+  }
+}
