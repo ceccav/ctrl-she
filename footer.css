@@ -1,6 +1,6 @@
 /* Footer stays beige to frame the white content area */
 footer {
-  background: #f4efe8;
+  background: var(--header-footer-background);
   border-top: 1px solid rgba(0, 0, 0, .12);
 
   /* Taller footer = nicer "arrival" at the bottom */

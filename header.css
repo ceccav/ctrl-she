@@ -5,7 +5,7 @@ header {
   z-index: 10;
 
   /* Slightly transparent beige + blur = modern glassy feel */
-  background-color: rgba(244, 239, 232, 0.72);
+  background-color: var(--header-footer-background);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 

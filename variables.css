@@ -1,0 +1,4 @@
+:root {
+  /*:root the root element, normally the html element*/
+  --header-footer-background: rgba(244, 239, 232, 0.72);
+}
