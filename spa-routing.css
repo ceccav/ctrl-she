@@ -70,4 +70,12 @@ body {
     text-underline-offset: 7px;
     text-decoration-thickness: 2px;
   }
+
+  &:has(#style:target) header nav a[href="#contact-us"],
+  &:has(#style-featured:target) header nav a[href="#contact-us"] {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+  }
 }

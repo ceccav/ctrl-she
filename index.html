@@ -333,6 +333,58 @@
         </div>
       </article>
     </section>
+    <!-- CONTACT -->
+    <section id="contact-us" class="page">
+      <article id="contact-us-featured" class="featured">
+        <h1>Contact us</h1>
+
+        <form>
+          <label>E-mail:
+            <input type="email" name="email" required placeholder="write your email here">
+          </label>
+
+          <label> First name:
+            <input type="text" name="firstName" required>
+          </label>
+
+          <label> Last name:
+            <input type="text" name="lastName" required>
+          </label>
+
+          <label>Subject:
+            <select name="subject">
+              <option>Question</option>
+              <option>Opinion</option>
+              <option>Suggestion for improvement</option>
+            </select>
+          </label>
+
+          <label> Your question/opinion:
+            <textarea name="message" required minlength="5"></textarea>
+          </label>
+
+          <section class="radio-button-group">
+            Is it alright if we give you a call?
+
+            <label>
+              <input type="radio" name="phoneOk" value="yes" required> Yes
+            </label>
+
+            <label>
+              <input type="radio" name="phoneOk" value="no"> No
+            </label>
+          </section>
+
+          <label>
+            <input type="checkbox" name="newsletter">
+            Subscribe on our newsletter
+          </label>
+
+          <button type="submit">Send</button>
+        </form>
+      </article>
+    </section>
+
   </main>
 
   <footer>
@@ -354,6 +406,7 @@
       <section>
         <h3>About</h3>
         <p>CTRL / SHE — soft power in a digital world.</p>
+        <p><a href="#contact-us">CONTACT US</a></p>
       </section>
 
       <!-- Colophon / meta text moved here (instead of sitting in the content) -->

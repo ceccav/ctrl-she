@@ -1,0 +1,72 @@
+input,
+textarea,
+select,
+button {
+  font: inherit;
+
+  /* not needed since we have box sizing.
+  box-sizing: border-box;
+  */
+}
+
+label:not(label[for="menu-toggle"]) {
+  margin-bottom: 15px;
+}
+
+label:not([for="menu-toggle"]),
+input:not([type="checkbox"], [type="radio"]),
+textarea {
+  display: block;
+  width: 100%;
+
+}
+
+textarea {
+  height: 100px;
+}
+
+button[type="submit"] {
+  float: inline-end;
+  padding: 2px 30px;
+  /*set a pointer a hand as cursor when the user hovers over the button*/
+  cursor: pointer;
+}
+
+/*don't let labels be on the same line as their radiobutton 
+in a group of radio buttond*/
+.radio-button-group {
+  label {
+    display: inline;
+    margin-bottom: 15px;
+  }
+}
+
+/*nice to have style more evenly beetween browsers*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  padding: 0.2em 0.75em;
+  border: 1px solid #888;
+  border-radius: 4px;
+}
+
+/*better sizing and control over color but not in safari*/
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #0066cc;
+  width: 0, 5em;
+  height: 0, 5em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #0066cc;
+}
