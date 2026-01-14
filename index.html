@@ -14,7 +14,11 @@
       <div class="logo"><a href="#home">CTRL / SHE</a></div>
       <p class="tagline">Soft power in a digital world.</p>
 
-      <nav>
+      <!-- Checkbox hack for CSS-only hamburger menu -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle">☰</label>
+      <!-- Small JS event handler that closes the menu -->
+      <nav onclick="document.querySelector('#menu-toggle').checked = false">
         <a href="#home">HOME</a>
         <a href="#tech">TECH</a>
         <a href="#work">WORK</a>
