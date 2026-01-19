@@ -86,13 +86,6 @@
   }
 }
 
-/* Reading width:
-   Home already feels centered because it has a clear editorial layout.
-   For category pages, we center the content with a consistent reading width. */
-:root {
-  --reading-width: 760px;
-}
-
 /* Featured articles: keep the whole article centered and not full-width */
 .featured {
   max-width: var(--reading-width);
